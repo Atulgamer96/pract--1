@@ -1,0 +1,64 @@
+/* Timeline Item Styling */
+.timeline-item {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Circular Icon */
+  .timeline-icon {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    font-size: 24px;
+  }
+  
+  /* Arrow Styling */
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px; /* Adjust based on spacing between cards */
+    width: 20px;
+    height: 2px;
+    background-color: #007bff;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #007bff;
+  }
+  
+  /* Remove Arrows for Last Item in Row */
+  .row > div:last-child .timeline-item::after,
+  .row > div:last-child .timeline-item::before {
+    display: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .timeline-item::after {
+      display: none; /* Remove arrows for stacked layout on small screens */
+    }
+    .timeline-item::before {
+      display: none;
+    }
+  }
+  

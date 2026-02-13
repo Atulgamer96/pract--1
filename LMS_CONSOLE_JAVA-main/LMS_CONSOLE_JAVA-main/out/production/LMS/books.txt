@@ -1,0 +1,5 @@
+Hindi,1
+English,2
+Maths,3
+Sanskrit,4
+Computer,5

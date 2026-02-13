@@ -1,0 +1,236 @@
+/* ShowRegistration.css */
+.registration-container {
+  text-align: center;
+  padding: 40px 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.registration-header {
+  margin-bottom: 40px;
+}
+
+.registration-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.registration-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.registration-card {
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Smaller cards: Team and Food */
+.team-card,
+.food-card {
+  width: 240px;
+  padding: 25px 20px;
+}
+
+.team-card h3,
+.food-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.team-card .card-amount,
+.food-card .card-amount {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* Main highlight card (Registration Fee) */
+.highlight-card.main-highlight {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #8b6914;
+  transform: scale(1.05);
+  border: 3px solid #ffcc00;
+  width: 360px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* reduce spacing between items */
+}
+
+.highlight-card.main-highlight:hover {
+  transform: scale(1.08);
+}
+
+/* Fee card content */
+.card-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #8b6914;
+}
+
+.fee-option {
+  margin: 6px 0;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.fee-type {
+  font-size: 0.9rem;
+  color: #5e412f;
+  font-weight: 600;
+}
+
+.fee-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.old-fee {
+  text-decoration: line-through;
+  color: #e74c3c;
+  margin-right: 6px;
+}
+
+.new-fee {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.special-offer {
+  font-style: italic;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #c0392b;
+  font-size: 0.95rem;
+}
+
+.my-btn-reg {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: var(--skin-gradient);
+  color: #fff; /* text color */
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.my-btn-reg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  color: #fff; /* keep text white on hover */
+}
+
+
+/* Card images */
+.card-img {
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.fee-img {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 15px;
+}
+
+.team-img,
+.food-img {
+  width: 120px;
+  height: 120px;
+}
+
+.registration-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.important-note {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-left: 4px solid #ffc107;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .highlight-card.main-highlight {
+    width: 300px;
+    padding: 25px 20px;
+    transform: scale(1);
+  }
+
+  .highlight-card.main-highlight:hover {
+    transform: scale(1.05);
+  }
+
+  .team-card,
+  .food-card {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .team-img,
+  .food-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .fee-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .registration-header h2 {
+    font-size: 2rem;
+  }
+}

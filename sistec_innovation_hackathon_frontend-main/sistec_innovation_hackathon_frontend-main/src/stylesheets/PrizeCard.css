@@ -1,0 +1,167 @@
+.prize-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 3rem; 
+}
+
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* color: var(--skin-color); */
+    color: var(--text-black-900);
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+}
+
+.gradient-text {
+  background: var(--skin-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+
+.prize-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    position: relative;
+    flex-wrap: wrap; 
+}
+
+.prize-card {
+    position: relative;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px; 
+}
+
+.prize-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.prize-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.prize-image {
+    width: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.prize-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prize-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin-top: 16px;
+}
+
+.prize-description {
+    font-size: 1rem;
+    color: white;
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+.prize-1 {
+    background: linear-gradient(135deg, #34d399, #14b8a6);
+    z-index: 3;
+}
+
+.prize-2 {
+    background: linear-gradient(135deg, #60a5fa, #4f46e5);
+    position: absolute;
+    top: 140px;
+    left: -50px;
+    z-index: 2;
+}
+
+.prize-3 {
+    background: linear-gradient(135deg, #60a5fa, #4f46e5);
+    position: absolute;
+    top: 140px;
+    right: -50px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 32px;
+    }
+
+    .prize-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prize-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .prize-2 {
+        position: static;
+        margin-top: 0;
+    }
+
+    .prize-3 {
+        position: static;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .prize-title {
+        font-size: 1.5rem;
+    }
+
+    .prize-amount {
+        font-size: 1.5rem;
+    }
+
+    .prize-description {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure no overflow */
+    .prize-card {
+        width: 100%; /* Cards will fill the width */
+        max-width: 100%;
+    }
+
+    .prize-2,
+    .prize-3 {
+        position: static;
+        margin-top: 0;
+    }
+}
